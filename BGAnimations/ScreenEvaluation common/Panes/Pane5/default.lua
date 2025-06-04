@@ -280,55 +280,55 @@ label.padding = 3
 label.max_width = ((pane_width/3)/label.zoom) - ((label.padding/label.zoom)*3)
 
 -- avg_timing_error label
-pane[#pane+1] = Def.BitmapText{
-	Font=ThemePrefs.Get("ThemeFont") .. " Normal",
-	Text=ScreenString("MeanTimingError"),
-	InitCommand=function(self)
-		self:x(40):y(label.y)
-			:zoom(label.zoom):maxwidth(label.max_width)
+-- pane[#pane+1] = Def.BitmapText{
+	-- Font=ThemePrefs.Get("ThemeFont") .. " Normal",
+	-- Text=ScreenString("MeanTimingError"),
+	-- InitCommand=function(self)
+		-- self:x(40):y(label.y)
+			-- :zoom(label.zoom):maxwidth(label.max_width)
 
-		if self:GetWidth() > label.max_width then
-			self:horizalign(left):x(label.padding)
-		end
-	end,
-}
+		-- if self:GetWidth() > label.max_width then
+			-- self:horizalign(left):x(label.padding)
+		-- end
+	-- end,
+-- }
 
 -- avg_timing_error label
-pane[#pane+1] = Def.BitmapText{
-	Font=ThemePrefs.Get("ThemeFont") .. " Normal",
-	Text=ScreenString("MeanOffset"),
-	InitCommand=function(self)
-		self:x(40 + (pane_width-80)/3):y(label.y)
-			:zoom(label.zoom):maxwidth(label.max_width)
+-- pane[#pane+1] = Def.BitmapText{
+	-- Font=ThemePrefs.Get("ThemeFont") .. " Normal",
+	-- Text=ScreenString("MeanOffset"),
+	-- InitCommand=function(self)
+		-- self:x(40 + (pane_width-80)/3):y(label.y)
+			-- :zoom(label.zoom):maxwidth(label.max_width)
 
-		if self:GetWidth() > label.max_width then
-			self:horizalign(left):x(label.padding)
-		end
-	end,
-}
+		-- if self:GetWidth() > label.max_width then
+			-- self:horizalign(left):x(label.padding)
+		-- end
+	-- end,
+-- }
 
 -- std_dev label
-pane[#pane+1] = Def.BitmapText{
-	Font=ThemePrefs.Get("ThemeFont") .. " Normal",
-	Text=ScreenString("StdDev"),
-	InitCommand=function(self)
-		self:x(40 + (pane_width-80)/3 * 2):y(label.y)
-			:zoom(label.zoom):maxwidth(label.max_width)
-	end,
-}
+-- pane[#pane+1] = Def.BitmapText{
+	-- Font=ThemePrefs.Get("ThemeFont") .. " Normal",
+	-- Text=ScreenString("StdDev"),
+	-- InitCommand=function(self)
+		-- self:x(40 + (pane_width-80)/3 * 2):y(label.y)
+			-- :zoom(label.zoom):maxwidth(label.max_width)
+	-- end,
+-- }
 
 -- max_error label
-pane[#pane+1] = Def.BitmapText{
-	Font=ThemePrefs.Get("ThemeFont") .. " Normal",
-	Text=ScreenString("MaxError"),
-	InitCommand=function(self)
-		self:x(pane_width-40):y(label.y)
-			:zoom(label.zoom):maxwidth(label.max_width)
+-- pane[#pane+1] = Def.BitmapText{
+	-- Font=ThemePrefs.Get("ThemeFont") .. " Normal",
+	-- Text=ScreenString("MaxError"),
+	-- InitCommand=function(self)
+		-- self:x(pane_width-40):y(label.y)
+			-- :zoom(label.zoom):maxwidth(label.max_width)
 
-		if self:GetWidth() > label.max_width then
-			self:horizalign(right):x(pane_width - label.padding)
-		end
-	end,
-}
+		-- if self:GetWidth() > label.max_width then
+			-- self:horizalign(right):x(pane_width - label.padding)
+		-- end
+	-- end,
+-- }
 
 return pane

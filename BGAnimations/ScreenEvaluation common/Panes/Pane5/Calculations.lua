@@ -162,50 +162,50 @@ af[#af+1] = Def.ActorMultiVertex{
 	end
 }
 
--- ---------------------------------------------
--- BitmapText actors for text
-local bmts = Def.ActorFrame{}
-bmts.InitCommand=function(self) self:y(-pane_height+32) end
-local pad = 40
+	-- ---------------------------------------------
+	-- BitmapText actors for text
+-- local bmts = Def.ActorFrame{}
+-- bmts.InitCommand=function(self) self:y(-pane_height+32) end
+-- local pad = 40
 
--- avg_timing_error value with "ms" label
-bmts[#bmts+1] = Def.BitmapText{
-	Font=ThemePrefs.Get("ThemeFont") .. " Normal",
-	Text=("%.2fms"):format(avg_timing_error),
-	InitCommand=function(self)
-		self:x(pad):zoom(0.8)
-	end,
-}
+	-- avg_timing_error value with "ms" label
+-- bmts[#bmts+1] = Def.BitmapText{
+	-- Font=ThemePrefs.Get("ThemeFont") .. " Normal",
+	-- Text=("%.2fms"):format(avg_timing_error),
+	-- InitCommand=function(self)
+		-- self:x(pad):zoom(0.8)
+	-- end,
+-- }
 
--- avg_offset value with "ms" label
-bmts[#bmts+1] = Def.BitmapText{
-	Font=ThemePrefs.Get("ThemeFont") .. " Normal",
-	Text=("%.2fms"):format(avg_offset),
-	InitCommand=function(self)
-		self:x(pad + (pane_width-2*pad)/3):zoom(0.8)
-	end,
-}
+	-- avg_offset value with "ms" label
+-- bmts[#bmts+1] = Def.BitmapText{
+	-- Font=ThemePrefs.Get("ThemeFont") .. " Normal",
+	-- Text=("%.2fms"):format(avg_offset),
+	-- InitCommand=function(self)
+		-- self:x(pad + (pane_width-2*pad)/3):zoom(0.8)
+	-- end,
+-- }
 
--- std_dev value with "ms" label
-bmts[#bmts+1] = Def.BitmapText{
-	Font=ThemePrefs.Get("ThemeFont") .. " Normal",
-	Text=("%.2fms"):format(std_dev * 3),
-	InitCommand=function(self)
-		self:x(pad + (pane_width-2*pad)/3 * 2):zoom(0.8)
-	end,
-}
+	-- std_dev value with "ms" label
+-- bmts[#bmts+1] = Def.BitmapText{
+	-- Font=ThemePrefs.Get("ThemeFont") .. " Normal",
+	-- Text=("%.2fms"):format(std_dev * 3),
+	-- InitCommand=function(self)
+		-- self:x(pad + (pane_width-2*pad)/3 * 2):zoom(0.8)
+	-- end,
+-- }
 
--- max_error value with "ms" label
-bmts[#bmts+1] = Def.BitmapText{
-	Font=ThemePrefs.Get("ThemeFont") .. " Normal",
-	Text=("%.2fms"):format(max_error),
-	InitCommand=function(self)
-		self:x(pane_width-pad):zoom(0.8)
-	end,
-}
+	-- max_error value with "ms" label
+-- bmts[#bmts+1] = Def.BitmapText{
+	-- Font=ThemePrefs.Get("ThemeFont") .. " Normal",
+	-- Text=("%.2fms"):format(max_error),
+	-- InitCommand=function(self)
+		-- self:x(pane_width-pad):zoom(0.8)
+	-- end,
+-- }
 
--- add bmts ActorFrame to overall ActorFrame
-af[#af+1] = bmts
+	-- add bmts ActorFrame to overall ActorFrame
+-- af[#af+1] = bmts
 
 -- ---------------------------------------------
 
