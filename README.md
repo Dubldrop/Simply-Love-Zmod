@@ -1,4 +1,4 @@
-# Zmod fork of Simply Love
+# Zmod fork of Simply Love (Personal Edits)
 
 A fork of Simply Love with some extra features that (attempt to) enhance quality of life while playing.
 
